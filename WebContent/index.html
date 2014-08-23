@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<style>
+
+.color{
+    color: #002952;
+}
+
+.vAlign{
+    vertical-align: middle;
+}
+
+.footerclass{
+	  position: relative;
+	  margin-top: -50px; /* negative value of footer height */
+	  clear:both;
+	  padding-top:20px;
+	  text-align:center;
+}
+
+.gradient{
+    background-color: #1a82f7;
+  background: url(images/linear_bg_2.png);
+  background-repeat: repeat-x;
+
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4779AE), to(#FFFFFF));
+
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(top, #4779AE, #FFFFFF);
+
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(top, #4779AE, #FFFFFF);
+
+  /* IE 10 */
+  background: -ms-linear-gradient(top, #4779AE, #FFFFFF);
+
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(top, #4779AE, #FFFFFF);
+}
+
+#test{
+    background: -webkit-linear-gradient(#4779AE, white); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#4779AE, white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#4779AE, white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#4779AE, white); /* Standard syntax (must be last) */
+}
+
+#contactsection{
+    background: -webkit-linear-gradient(white, #4779AE); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(white, #4779AE); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(white, #4779AE); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(white, #4779AE); /* Standard syntax (must be last) */   
+}
+
+
+</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Smart Health Care</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Fonts -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom Theme CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+    <link href="css/responsive-video.css" rel="sylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#video">
+                    <i class="fa fa-play-circle"></i>  <span class="light">Demo</span>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">Contact</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="login.jsp">Login</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="register.jsp">Register</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <section class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading" style="font-family: 'Lobster', cursive;">Smart Health Care</h1>
+                        <p class="intro-text" style="font-weight: bolder;">A Smart Approach To Health Care Technology Using Big Data Analysis </p>
+                        <div class="page-scroll">
+                            <a href="#about" class="btn btn-circle color">
+                                <i class="fa fa-angle-double-down animated"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="test" class="vAlign">
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2 class="vAlign">About Smart Health Care</h2>
+                <p style="text-align:justify">Smart Health Care is an application with an approach towards the problem of gathering clinical data from smaller geographic regions and perform big data analysis to determine health patterns, statistics. This includes analyzing and processing large volumes of data using NoSQL databases like MongoDB, advanced data processing techniques like Apache Hadoop, Map-Reduce etc, and analysis tools like R programming language.</p>
+                <p style="text-align:justify">The outcome is a useful and structured data pattern for clinical data in the field of medical research. Major benefits/impacts of this project will be for the society where doctors and medical practitioners will have more comprehensive and structured information about diseases, symptoms, causes, and patient's health. It will help the people in a region survive from epidemic diseases and aware them on better ways to improve nutrition and hygiene. This type of analysis can help the economists and governments to streamline the expenditure and address the most demanding health issue. 
+                </p>
+            </div>
+        </div>
+    </section>
+    </div>
+
+<!--    <section id="download" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2 class="color">Download Grayscale</h2>
+                    <p class="color">You can download Grayscale for free on the download page at Start Bootstrap. You can also get the source code directly from GitHub if you prefer. Additionally, Grayscale is the first Start Bootstrap theme to come with a LESS file for easy color customization!</p>
+                    <a href="http://startbootstrap.com/grayscale" class="btn btn-default btn-lg">Visit Download Page</a>
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+
+    <section id="video">
+        <div align="center" id="video1">
+            <div class="flex-video widescreen"><iframe width="560" height="315" src="//www.youtube.com/embed/La6MglDUx2Q" frameborder="0" allowfullscreen></iframe></div>
+        </div>
+    </section>
+
+    <div id="contactsection">
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact our team</h2>
+                <p>Feel free to email us to provide some feedback or if any questions you might have.</p>
+                <p>Akshay Saini <br> Padmaja Adhyam Nagarajan <br> Varun Chalasani</p>
+                <p><a href="mailto:smarthealthcare.sjsu@gmail.com" style="color:#002952; text-decoration:underline;">smarthealthcare.sjsu@gmail.com</a></p>
+                <ul class="list-inline banner-social-buttons">
+                    <li><a href="https://twitter.com/smarthealthsjsu" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                    <li><a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    </li>
+                    <li><a href="https://plus.google.com/109887510680269888239?
+   rel=author" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+    <footer>
+ 	<div class="footerclass container content-section text-center" style="padding-bottom:0px;">
+            <p style="font-size:15px;">Copyright© 2014, smarthealthcare-env.elasticbeanstalk.com</p>
+    </div>
+</footer>
+
+    <!-- Core JavaScript Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+
+</body>
+
+</html>

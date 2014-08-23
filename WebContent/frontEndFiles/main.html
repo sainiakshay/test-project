@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Project</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="js/pie.js"></script>
+    <script type="text/javascript" src="js/barchart.js"></script>
+    <script type="text/javascript" src="js/geochart.js"></script>
+    <script type="text/javascript" src="js/linechart.js"></script>
+    
+     <script>
+    
+    function submitCategories(){
+    	
+    	//var age = document.getElementById("ageDropdown");
+    	//var sex = document.getElementById("sexDropdown");
+    	//var country = document.getElementById("countryDropdown");
+    	//var state = document.getElementById("stateDropdown");
+    	//var year = document.getElementById("yearDropdown");
+    	
+    	var age = "0-25";
+    	var sex = "male"
+    	var country = "USA"
+    	var state = "CA"
+    	var year = "2015"
+    	
+    	 details = '{'
+ 			+'"age" : "'+age+'",'
+ 			+'"sex" : "'+sex+'",'
+ 			+'"country" : "'+country+'",'
+ 			+'"state" : "'+state+'",'
+ 			+'"year" : "'+year+'"'
+ 			+'}';
+    	
+    	$.ajax({
+    			type:"GET",
+    			url:"http://localhost:8080/MedicalPredictionApp/MainPageServlet",
+    			data:"details="+details,
+    			success:function(msg){
+    				window.parent.content.location.href="welcomeStudent.jsp";
+    			},
+    			error:function(msg){
+    				alert('class enrolling failed. Please try again!');
+    			}
+    		});
+    	}
+    
+    </script>
+    
+    </head>
+
+    <body>
+    <div class="container">
+    	<div class="row">
+    		<div class="col-md-10">
+				<h1>Smart Healthcare</h1>
+		
+				<nav class="navbar navbar-default" role="navigation">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+					  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					  </button>
+					  <a class="navbar-brand" href="#">Brand</a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					  <ul class="nav navbar-nav">
+						<li class="active"><a href="#">Print</a></li>
+						<li><a href="#">Download</a></li>
+						<li><a href="#">Email</a></li>
+					  </ul>
+					</div><!-- /.navbar-collapse -->
+				</nav>
+				
+				<div class="col-md-3">
+					<div class="panel panel-primary">
+					  <div class="panel-heading">
+						<h4>Categories</h4>
+					  </div>
+					  <div class="panel-body">
+					  
+						<div class="dropdown">
+						  <button class="btn btn-default dropdown-toggle" type="button" id="ageDropdown" data-toggle="dropdown">
+							Age          
+							<span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation" value="0-25">0-25</li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">25-50</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">50-100</a></li>
+							
+						  </ul>
+						</div>
+						<br />
+						<div class="dropdown">
+						  <button class="btn btn-default dropdown-toggle" type="button" id="sexDropdown" data-toggle="dropdown">
+							Sex
+							<span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Male</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Female</a></li>
+						  </ul>
+						</div>
+						<br />
+						<div class="dropdown">
+						  <button class="btn btn-default dropdown-toggle" type="button" id="countryDropdown" data-toggle="dropdown">
+							Country
+							<span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">USA</a></li>
+							<!--<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+							<li role="presentation" class="divider"></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>-->
+						  </ul>
+						</div>
+						<br />
+						<div class="dropdown">
+						  <button class="btn btn-default dropdown-toggle" type="button" id="stateDropdown" data-toggle="dropdown">
+							State
+							<span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">California</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Texas</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">NewYork</a></li>
+							<li role="presentation" class="divider"></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+						  </ul>
+						</div>
+						<br />
+						<div class="dropdown">
+						  <button class="btn btn-default dropdown-toggle" type="button" id="yearDropdown" data-toggle="dropdown">
+							Year
+							<span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">2014</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">2013</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">2012</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">2011</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">2010</a></li>
+							<li role="presentation" class="divider"></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+						  </ul>
+						</div>
+						<br />
+						<button type="submit" class="btn btn-primary" width = 100px onclick="submitCategories()">Submit</button>				
+					  </div>
+					</div>
+				</div>
+				<div class="col-md-9">
+					<div class="panel panel-primary">
+					  <div class="panel-heading">
+						<h4>Prediction Charts</h4>
+					  </div>
+					   <!--Div that will hold the pie chart-->
+    					<div id="piechart" style="width: 650px; height: 500px;"></div>
+    					<div id="chart_bar"></div><br><br>
+    					<div id="chart_geo"></div>
+    					<div id="chart_line"></div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="col-md-2">
+				
+				<div>
+
+				<h3>Live Health News Updates</h3>
+					<div id="widgetmain" style="text-align:left;overflow-y:auto;overflow-x:hidden;width:200px;background-color:#FFFFFF; border:0px solid #333333;">
+					<div id="rsswidget" style="height:500px;">
+					<iframe src="http://us1.rssfeedwidget.com/getrss.php?time=1405733639937&amp;x=http%3A%2F%2Frss.news.yahoo.com%2Frss%2Fhealth&amp;w=200&amp;h=500&amp;bc=333333&amp;bw=0&amp;bgc=FFFFFF&amp;m=20&amp;it=true&amp;t=(default)&amp;tc=333333&amp;ts=15&amp;tb=transparent&amp;il=true&amp;lc=0000FF&amp;ls=14&amp;lb=false&amp;id=true&amp;dc=333333&amp;ds=14&amp;idt=true&amp;dtc=284F2D&amp;dts=12" border="0" hspace="0" vspace="0" frameborder="no" marginwidth="0" marginheight="0" style="border:0; padding:0; margin:0; width:200px; height:500px;" id="rssOutput">Reading RSS Feed ...</iframe>
+					</div>
+					<div style="text-align:right;margin-bottom:0;border-top:0px solid #333333;" id="widgetbottom"><span style="font-size:70%"><!--<a href="http://www.rssfeedwidget.com">rss feed widget</a>-->&nbsp;</span><br></div></div>
+				</div>
+				
+				<div>
+					<h4>Youtube</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+    </body>
+</html>
